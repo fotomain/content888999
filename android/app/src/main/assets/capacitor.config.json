@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "my8app",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}
