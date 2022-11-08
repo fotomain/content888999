@@ -72,7 +72,7 @@ window.addEventListener('DOMContentLoaded', async () => {
               name TEXT 
         );
         `
-       //=== INSERT INTO test (id,name) VALUES (11111,'2222222')
+
 
         let query2 = `
             SELECT * FROM test
@@ -82,13 +82,26 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 
         })
-        // console.log(55555555)
-        // const res1: any = await db.execute(query1);
+
+                const doInsertUpdateTest=false
+                if (doInsertUpdateTest)
+                {
+                    // console.log(55555555)
+                    //=== UPDATE INSERT AND SAVE DATA TEST
+                    //=== INSERT INTO test (id,name) VALUES (11111,'2222222')
+                    let query1 = `
+                    INSERT INTO test (id,name) VALUES (11111,'2222222')
+                    `
+                    const res1: any = await db.execute(query1);
+                    alert("=== res1 === "+JSON.stringify(res1))
+                    console.log(`=== sqlite test result 1 : ${JSON.stringify(res1)}`);
+
+                }
         const res2: any = await db.query(query2);
         // alert("=== res2 === "+JSON.stringify(res2))
 
+        console.log(`=== sqlite test result 2 : ${JSON.stringify(res2)}`);
 
-        console.log(`=== sqlite test result 1 : ${JSON.stringify(res2)}`);
         await db.close();
         await sqlite.closeConnection("db_issue99");
 

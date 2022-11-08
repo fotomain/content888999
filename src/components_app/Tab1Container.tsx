@@ -739,8 +739,6 @@ const Search: React.FC = (props:any) => {
                                                    onClick={(e) =>  {
                                                        console.log("=== onClick Cancel")
                                                        set_mode_close_form_reg_lexemas_crud_create(true)
-
-
                                                    }}
                                         >
                                             Cancel
