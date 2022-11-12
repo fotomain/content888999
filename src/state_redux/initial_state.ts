@@ -9,6 +9,11 @@ export type initialStateType = {
     work_List1_data:any,
     work_List1_ready:boolean,
 
+    //new main data -> STEP 1
+    work_list_content_types_data :any,
+    work_list_content_types_ready:boolean,
+
+
 }
 
 export const initialState:initialStateType = {
@@ -20,6 +25,12 @@ export const initialState:initialStateType = {
     work_sqlite_api_global:null,
     work_List1_data:null,
     work_List1_ready:false,
+
+    //new main data -> STEP 2
+    work_list_content_types_data :null,
+    work_list_content_types_ready:false,
+
+
 };
 
 

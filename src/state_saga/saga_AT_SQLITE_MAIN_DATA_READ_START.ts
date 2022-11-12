@@ -117,6 +117,7 @@ const to_do_function = async(action_to_exec:any) => {
 
     try {
 
+        //new main data -> STEP 6 !!! query from SQLite
 
     search_string1 = gl_duplicate_quotes(search_string1)
 

@@ -2,8 +2,8 @@
 // my8shop-v1-dictionary-sqlite
 
 //=== new place
-// npm install --save --legacy-peer-deps;
-// ionic build --prod; ionic cap copy --prod; ionic serve
+// !!!if_probl_npm-> npm install --save --legacy-peer-deps;
+// npm i; ionic build --prod; ionic cap copy --prod; ionic serve
 
 // ionic cap add android; ionic build --prod; ionic cap copy --prod
 

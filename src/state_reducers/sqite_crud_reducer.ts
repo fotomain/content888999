@@ -74,6 +74,12 @@ export default (state = initialState, action:any) => {
             ...tState,
             ['work_List1_data']: IS_LOADING,
             ['work_List1_ready']: false,
+
+            //new main data -> STEP 3
+            ['work_list_content_types_data']: IS_LOADING,
+            ['work_list_content_types_ready']: false,
+
+
         }
 
         return ret;
@@ -87,6 +93,11 @@ export default (state = initialState, action:any) => {
             ...tState,
             ['work_List1_data']:    action.ret_data_to_state,
             ['work_List1_ready']:   true,
+
+            //new main data -> STEP 4
+            ['work_list_content_types_data']: action.ret_data_to_state,
+            ['work_list_content_types_ready']: true,
+
         }
         return ret;
     }
