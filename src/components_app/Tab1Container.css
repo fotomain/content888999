@@ -1,0 +1,452 @@
+
+/*#ion-react-wrapper*/
+/*{*/
+/*  border:solid;*/
+/*  border-color:teal;*/
+/*}*/
+
+/*ion-react-wrapper*/
+
+/*direct #popover_settings_id > #ion-react-wrapper {*/
+/*descendatn #popover_settings_id #descendant  {*/
+
+/*.toggle-inner{*/
+/*.toggle-inner {*/
+/*.settings_class_togle > toggle-icon {*/
+/*  !*color:red;*!*/
+/*  outline:solid;*/
+/*}*/
+/*.settings_class_togle > toggle-inner {*/
+/*  !*color:red;*!*/
+/*  outline:solid;*/
+/*}*/
+
+
+/*=== TOGGLE + */
+
+        /*=== COOL https://github.com/ionic-team/ionic-framework/issues/19868  */
+        /*=== COOL https://codepen.io/brandyscarney/pen/YzyxeXa */
+        /*=== COOL Adding an image to the handle background: */
+        /*ion-toggle {*/
+        /*  --handle-background-checked: #fff url(/assets/power-icon.png) no-repeat center / contain;*/
+        /*}*/
+
+        /*toggle-inner {*/
+        /*  outline:solid;*/
+        /*  outline-color:red;*/
+        /*}*/
+
+        .settings_class_togle {
+
+          --background: darkgrey;
+          --handle-background:grey;
+          --handle-border: 1px solid red;
+          --handle-box-shadow: solid;
+
+        }
+
+/*=== TOGGLE - */
+
+.settings_class_titile{
+
+  padding-left: 10px;
+  margin-left: 10px;
+  color:var(--ion-color-primary)
+
+}
+
+.list_header_class1{
+  min-height:15px;
+  height:10px;
+}
+
+
+#popover_settings_id > #ion-react-wrapper {
+  border:solid;
+  border-color:teal;
+
+  /*=== works */
+  /*width:80vw;*/
+  /*max-width:600px;*/
+}
+
+
+.reg_lexemas_card_class{
+  flex: 6;
+}
+
+ion-popover {
+  /*--background: rgba(40, 173, 218, 0.6);*/
+  /*--backdrop-opacity: 0.6;*/
+  /*--box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);*/
+  --color: white;
+  --border-color: teal;
+  --border-width: 2px;
+  /*=== MAIN width*/
+  --width: 350px;
+}
+
+ion-popover ion-content {
+  /*--background: rgba(40, 173, 218, 0.6);*/
+}
+
+ion-popover::part(backdrop) {
+  /*background-color: rgb(6, 14, 106);*/
+}
+
+
+.radio_item{
+
+  font-size: 8px;
+  /*--color-checked:teal;*/
+  /*--color:teal;*/
+  width: 15px;
+  height: 15px;
+
+}
+
+.radio_item_box1_class {
+  /*word-break: unset;*/
+  /*=== MAIN width*/
+  inline-size: 180px;
+  height:15px;
+}
+
+/* 320 < */
+@media screen and (min-width:321px) and (max-width:480px){
+  /*portrait slim*/
+  ion-popover {
+    --width: 300px;
+  }
+
+  .list_how_to_search{
+    flex-direction: column;
+  }
+
+  .settings_window_class{
+    padding-left: 1px;
+    margin-left: 1px;
+  }
+
+  ion-item {
+    --min-height:10px;
+    height:30px;
+    --padding-start:1px;
+    /*text-align: center;*/
+
+  }
+
+  .radio_item{
+    width: 28px;
+    height: 10px;
+    padding:1px;
+  }
+
+  .radio_item_box1_class{
+    margin-top: 2px;
+    margin-button: 2px;
+  }
+
+  /*MAIN Y - RADIO CILRCLE*/
+  ion-radio{
+    margin-top: 1px;
+  }
+
+}
+
+/* 480 < */
+@media screen and (min-width:481px) and (max-width:600px){
+  /*portrait slim*/
+  ion-popover {
+    --width: 300px;
+  }
+
+  .list_how_to_search{
+     flex-direction: column;
+  }
+
+  .settings_window_class{
+    padding-left: 1px;
+    margin-left: 1px;
+  }
+
+  .radio_item_box1_class{
+    margin-top: 2px;
+    margin-button: 2px;
+  }
+
+  .radio_item1{
+    width: 28px;
+    height: 10px;
+    padding:1px;
+  }
+
+  /*MAIN Y - RADIO CILRCLE*/
+  ion-radio{
+    margin-top: 1px;
+  }
+
+}
+
+/* 600 < */
+@media screen and (min-width:601px) and (max-width:720px){
+
+   ion-popover {
+    --width: 300px;
+  }
+
+  .list_how_to_search{
+    flex-direction: column;
+  }
+
+  .settings_window_class{
+    padding-left: 1px;
+    margin-left: 1px;
+  }
+
+  .radio_item_box1_class{
+    margin-top: 2px;
+    margin-button: 2px;
+  }
+
+  .radio_item1{
+    width: 12px;
+    height: 12px;
+    padding:1px;
+  }
+
+  /*MAIN Y - RADIO CILRCLE*/
+  ion-radio{
+    margin-top: 1px;
+  }
+
+}
+
+/* 720 < */
+@media screen and (min-width:721px) and (max-width:768px){
+  .radio_item1{
+    width: 15px;
+    height: 15px;
+    padding:1px;
+  }
+  .ion_item_how_to_search{
+    flex-direction: column;
+  }
+
+  .radio_item_box1_class{
+    margin-top: 2px;
+    margin-button: 2px;
+  }
+
+
+}
+
+/* 768 < */
+@media screen and (min-width:769px) and (max-width:800px){
+  .radio_item1{
+    width: 20px;
+    height: 20px;
+    padding:1px;
+  }
+
+  .radio_item_box1_class{
+    margin-top: 2px;
+    margin-button: 2px;
+  }
+
+  /*MAIN Y - RADIO CILRCLE*/
+  ion-radio{
+    margin-top: 1px;
+  }
+
+}
+
+/* 1024 < */
+@media screen and (min-width:801px) and (max-width:1024px){
+  .radio_item1{
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* >>1024 < */
+@media screen and (min-width:1024px) and (max-width:5000px){
+  .radio_item1{
+    width: 30px;
+    height: 30px;
+}}
+
+
+
+.ion_item_how_to_search{
+  /*flex-wrap: nowrap;*/
+}
+
+.list_how_to_search{
+  background-color:white; /*=== NOT DELETE background_main*/
+  /*=== display:inline-flex;*/
+  flex-direction: column;
+  margin-left:10px;
+}
+
+
+#input_search{
+
+  padding-left: 5px;
+
+}
+
+.btn_keypad_icon {
+  transform: translate(0, 5px);
+}
+
+.btn_mic_icon {
+  transform: translate(0, 5px);
+  /*align:center;*/
+  /*position: absolute;*/
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*height: 50%;*/
+}
+
+#modal_settings_id{
+  /*position: relative;*/
+  /*width:  500px;*/
+  /*height: 300px;*/
+}
+
+ion-card-title {
+  font-size: 35px;
+}
+
+.btn_ok_cancel {
+  width: 80px;
+}
+
+.row_ok_cancel {
+  align-content: center;
+  justify-content:flex-end;
+  margin-bottom:1em;
+}
+
+.btn_settings_icon {
+   /*color: teal;*/
+  margin-top: 5px;
+}
+
+.btn_keypad_icon {
+   /*color: teal;*/
+}
+
+.icon_mic_icon {
+   /*color: teal;*/
+}
+
+.btn_mic {
+  flex:1;
+  /*--color: teal;*/
+  --background:transparent;
+  --box-shadow:none;
+}
+
+
+/*var(--ion-toolbar-border-color, var(--ion-border-color, var(--ion-color-step-150, #c1c4cd)))*/
+/*--border-color*/
+/*searchbar-input sc-ion-searchbar-md*/
+/*.searchbar-input > sc-ion-searchbar {*/
+/*  color: red;*/
+/*}*/
+.searchbar-search-icon {
+  /*align-self: center;*/
+  /*background-color: red;*/
+  /*display:none;*/
+  /*color: transparent !important;*/
+  /*color: teal !important;*/
+  color: var(--ion-color-primary) !important;
+  right: 16px !important;
+  left: auto !important;
+}
+
+.searchbar-clear-button
+{
+  /*align-self: center;*/
+  /*=== .searchbar-clear-button.sc-ion-searchbar-md*/
+  /*margin-right: -30px !important;*/
+  /*color: red !important;*/
+  /*color: teal !important;*/
+  color: var(--ion-color-primary) !important;
+  right: auto !important;
+  left: 5px !important;
+
+
+}
+/*ion-searchbar.searchbar-ios {*/
+/*  background-color: red;*/
+/*}*/
+
+/*.searchbar-input-container{*/
+.searchbar-input{
+  /*border-color:red;*/
+  border-radius: 20px;
+/*//any style that you want to implement on your searchbar*/
+/*}*/
+}
+
+.sc-ion-searchbar-md-h {
+
+  --box-shadow:
+          0 2px 2px 0
+                    var(--ion-color-primary),
+  /*                  !*rgba(0, 0, 0, 0.14),*!*/
+                0 3px 1px -2px
+                    var(--ion-color-primary),
+  /*                  !*rgba(0, 0, 0, 0.2),*!*/
+                0 1px 5px 0
+                    var(--ion-color-primary);
+  /*                  !*rgba(0, 0, 0, 0.12);*!*/
+
+}
+.search_bar{
+  flex:20;
+  margin-left:25px;
+
+  /*works*/
+  /*box-shadow: 0 0 5px red;*/
+  /*color: var(--ion-color-primary);*/
+  /*border-color: var(--ion-color-primary);*/
+  /*clear-icon:'always';*/
+  /*mode:'md';*/
+  /*--clear-button-color:red;*/
+}
+
+/*searchbar-search-icon sc-ion-searchbar-md md*/
+/*.searchbar-clear-icon {*/
+/*  width: 30px !important;*/
+/*  color:red;*/
+/*}*/
+
+/*========== main ==========*/
+.container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.container p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #8c8c8c;
+  margin: 0;
+}
+
+.container a {
+  text-decoration: none;
+}

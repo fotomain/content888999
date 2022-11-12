@@ -1,0 +1,22 @@
+
+
+.input_class  {
+    /*color:var(--ion-color-primary);*/
+    color:red;
+}
+
+.icon_class  {
+    color:var(--ion-color-primary);
+}
+
+
+#ador1_id:hover {
+    /*padding-bottom: 50%;*/
+    /*background-color:yellow;*/
+        cursor: pointer;
+}
+#ador2_id:hover {
+    /*padding-bottom: 50%;*/
+    /*background-color:yellow;*/
+        cursor: pointer;
+}
