@@ -119,6 +119,16 @@ const to_do_function = async(action_to_exec:any) => {
 
         //new main data -> STEP 6 !!! query from SQLite
 
+        var f_pre_sql = await database1.query( "PRAGMA case_sensitive_like = 1" )
+
+        var tSQL = "" +
+            "SELECT * FROM content_types "
+
+        var tRES= await database1.query( tSQL )
+
+        console.log("=== tRES.values",tRES.values)
+
+
     search_string1 = gl_duplicate_quotes(search_string1)
 
     console.log("=== search_string1", search_string1)
