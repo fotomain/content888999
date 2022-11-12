@@ -1,5 +1,29 @@
 import {interface_state} from "./global_var";
 
+const gl_duplicate_quotes = (p_str:string) => {
+
+    var tArr:string[] = p_str.split('')
+    tArr = tArr.map((el:any)=>{
+        if(el!=="'") { return el }
+        else        { return  "''" }
+    })
+    return tArr.join('')
+
+}
+
+
+const asyncLocal_Storage = {
+    setItem: function (key:string, value:string) {
+        return Promise.resolve().then(function () {
+            localStorage.setItem(key, value);
+        });
+    },
+    getItem: function (key:string) {
+        return Promise.resolve().then(function () {
+            return localStorage.getItem(key);
+        });
+    }
+};
 
 export function f_read_from_states(p_params:any){
 
