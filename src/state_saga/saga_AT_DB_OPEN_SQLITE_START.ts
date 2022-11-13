@@ -3,7 +3,7 @@ import {put, fork, select, takeEvery, takeLatest, call} from 'redux-saga/effects
 import {retDatabase_type1} from '../types'
 
 import {
-    AT_SQLITE_DB_OPEN_START,
+    AT_DB_OPEN_SQLITE_START,
 } from '../state_redux/actions_types';
 import global_names from "../code_global/global_names";
 
@@ -97,7 +97,7 @@ export function* watch_function(params: any) {
     console.log("=== watch_function " + thisFile)
     console.log(params)
 
-    yield  (takeLatest(AT_SQLITE_DB_OPEN_START, exec_function));
+    yield  (takeLatest(AT_DB_OPEN_SQLITE_START, exec_function));
 
 }
 

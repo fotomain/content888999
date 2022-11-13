@@ -1,7 +1,9 @@
 import {
     IS_LOADING,
-    AT_SQLITE_MAIN_DATA_READ_START,
-    AT_SQLITE_MAIN_DATA_READ_SUCCESS, AT_SQLITE_DB_OPEN_SUCCESS, AT_SQLITE_DB_OPEN_START,
+    AT_CRUD_READ_GLOBAL_SQLITE_START,
+    AT_CRUD_READ_GLOBAL_SQLITE_SUCCESS,
+    AT_DB_OPEN_SQLITE_START,
+    AT_DB_OPEN_SQLITE_SUCCESS,
 
 } from '../state_redux/actions_types';
 
@@ -45,7 +47,7 @@ export default (state = initialState, action:any) => {
     console.log("=== tState ", tState)
 
 
-    if(AT_SQLITE_DB_OPEN_START == action.type ) {
+    if(AT_DB_OPEN_SQLITE_START == action.type ) {
 
         // console.log("=== action START ",action)
 
@@ -58,7 +60,7 @@ export default (state = initialState, action:any) => {
         return ret;
     }
 
-    if(AT_SQLITE_DB_OPEN_SUCCESS == action.type ) {
+    if(AT_DB_OPEN_SQLITE_SUCCESS == action.type ) {
         console.log("=== if AT_SQLITE_DB_OPEN_SUCCESS ", action)
         const ret = {
             ...tState,
@@ -69,7 +71,7 @@ export default (state = initialState, action:any) => {
         return ret;
     }
 
-    if(AT_SQLITE_MAIN_DATA_READ_START == action.type ) {
+    if(AT_CRUD_READ_GLOBAL_SQLITE_START == action.type ) {
         const ret = {
             ...tState,
             ['work_List1_data']: IS_LOADING,
@@ -85,7 +87,7 @@ export default (state = initialState, action:any) => {
         return ret;
     }
 
-    if(AT_SQLITE_MAIN_DATA_READ_SUCCESS == action.type ) {
+    if(AT_CRUD_READ_GLOBAL_SQLITE_SUCCESS == action.type ) {
 
         // console.log("=== if AT_SQLITE_MAIN_DATA_READ_SUCCESS ", action)
         // alert("=== if AT_SQLITE_MAIN_DATA_READ_SUCCESS action.ret_data_to_state " + JSON.stringify(action.ret_data_to_state))
