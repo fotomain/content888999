@@ -9,6 +9,11 @@ export const AT_CRUD_READ_GLOBAL_SQLITE_SUCCESS = 'AT_CRUD_READ_GLOBAL_SQLITE_SU
 export const AT_CRUD_READ_cat_content_types_SQLITE_START = 'AT_CRUD_READ_cat_content_types_SQLITE_START';
 export const AT_CRUD_READ_cat_content_types_SQLITE_SUCCESS = 'AT_CRUD_READ_cat_content_types_SQLITE_SUCCESS';
 
+
+export const AT_CRUD_READ = 'AT_CRUD_READ';
+
+
+
 // DIRECT RUDUX
 
 // OTHER

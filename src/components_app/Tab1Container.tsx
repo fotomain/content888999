@@ -57,6 +57,7 @@ import {Dialog} from "@capacitor/dialog";
 import {IonPopover} from "@ionic/react";
 import {connect} from "react-redux";
 import {
+    function_AT_CRUD_READ,
     function_AT_DISPLAY_ACTION,
     function_AT_SQLITE_MAIN_DATA_READ_START
 } from "../state_redux/actions_functions";
@@ -256,6 +257,13 @@ const Search: React.FC = (props:any) => {
 
                 console.log("=== GO function_AT_SQLITE_MAIN_DATA_READ_START ")
                 props.function_AT_SQLITE_MAIN_DATA_READ_START({
+                    database_to_exec:   props.work_sqlile_database,
+                    sqlite_api_global_to_exec:   props.work_sqlite_api_global,
+                    search_string:      search_string,
+                })
+
+                console.log("=== GO function_AT_CRUD_READ ")
+                props.function_AT_CRUD_READ({
                     database_to_exec:   props.work_sqlile_database,
                     sqlite_api_global_to_exec:   props.work_sqlite_api_global,
                     search_string:      search_string,
@@ -815,6 +823,8 @@ const ReadFromState_mapStateToProps = (state:any) =>
 }
 
 const WriteToState_mapDispatchToProps = {
+
+    function_AT_CRUD_READ:function_AT_CRUD_READ,
 
     function_AT_SQLITE_MAIN_DATA_READ_START:function_AT_SQLITE_MAIN_DATA_READ_START,
     function_AT_DISPLAY_ACTION:function_AT_DISPLAY_ACTION,

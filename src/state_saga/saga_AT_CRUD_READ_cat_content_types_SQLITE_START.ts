@@ -53,7 +53,7 @@ export function* saga_AT_CRUD_READ_cat_content_types_SQLITE_START() {
     console.log('taskOne starting...');
     const ret1:any[] = yield takeLatest(AT_CRUD_READ_cat_content_types_SQLITE_START, exec1)
     // yield delay(7000);
-    console.log('=== ret1', ret1[0]);
+    console.log('=== ret111', ret1);
     console.log('first task completed');
 }
 
