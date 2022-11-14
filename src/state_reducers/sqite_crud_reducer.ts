@@ -1,5 +1,7 @@
 import {
     IS_LOADING,
+    AT_CRUD_READ,
+    AT_CRUD_READ_SUCCESS,
     AT_CRUD_READ_GLOBAL_SQLITE_START,
     AT_CRUD_READ_GLOBAL_SQLITE_SUCCESS,
     AT_DB_OPEN_SQLITE_START,
@@ -32,6 +34,13 @@ export default (state = initialState, action:any) => {
                 if(-1==[
                     "work_sqlile_database",
                     "work_sqlite_api_global",
+
+                    //new main data -> STEP 7
+                    "work_list_content_types_data",
+                    "work_list_content_types_ready",
+                    "work_list_content_posts_data",
+                    "work_list_content_posts_ready",
+
                     "work_List1_data",
                     "work_List1_ready",
                 ].indexOf(el[0])){
@@ -77,11 +86,39 @@ export default (state = initialState, action:any) => {
             ['work_List1_data']: IS_LOADING,
             ['work_List1_ready']: false,
 
+        }
+
+        return ret;
+    }
+
+    if(AT_CRUD_READ == action.type ) {
+
+        console.log("=== AT_CRUD_READ reducer action", action)
+
+        const ret = {
+            ...tState,
             //new main data -> STEP 3
-            ['work_list_content_types_data']: IS_LOADING,
-            ['work_list_content_types_ready']: false,
+            [action.state_data_name]: IS_LOADING,
+            [action.state_ready_name]: false,
 
+        }
 
+        return ret;
+    }
+
+    if(AT_CRUD_READ_SUCCESS == action.type ) {
+        console.log("=== AT_CRUD_READ_SUCCESS action ", action)
+        console.log("=== action.params_to_exec.state_data_name ", action.params_to_exec.state_data_name)
+        console.log("=== action.params_to_exec.state_ready_name ", action.params_to_exec.state_ready_name)
+        console.log("=== action.ret_data.length ", action.ret_data.length)
+
+        const is_reade = action.ret_data && action.ret_data.length>0
+
+        const ret = {
+            ...tState,
+            //new main data -> STEP 3
+            [action.params_to_exec.state_data_name]:    action.ret_data,
+            [action.params_to_exec.state_ready_name]:   is_reade,
         }
 
         return ret;
@@ -95,10 +132,6 @@ export default (state = initialState, action:any) => {
             ...tState,
             ['work_List1_data']:    action.ret_data_to_state,
             ['work_List1_ready']:   true,
-
-            //new main data -> STEP 4
-            ['work_list_content_types_data']: action.ret_data_to_state,
-            ['work_list_content_types_ready']: true,
 
         }
         return ret;

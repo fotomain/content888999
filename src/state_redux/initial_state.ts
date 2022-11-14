@@ -13,6 +13,9 @@ export type initialStateType = {
     work_list_content_types_data :any,
     work_list_content_types_ready:boolean,
 
+    work_list_content_posts_data :any,
+    work_list_content_posts_ready:boolean,
+
 
 }
 
@@ -29,6 +32,9 @@ export const initialState:initialStateType = {
     //new main data -> STEP 2
     work_list_content_types_data :null,
     work_list_content_types_ready:false,
+
+    work_list_content_posts_data :null,
+    work_list_content_posts_ready:false,
 
 
 };

@@ -3,6 +3,7 @@
 //===WEB https://www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2020/web/webtc/indexcaller.php
 
 import './Tab1Container.css';
+import {initialStateType} from '../state_redux/initial_state';
 //=== DOC
 // https://stackoverflow.com/questions/62699840/ionic-react-trying-to-implement-a-filtering-search-bar-to-filter-pre-made-lists
 
@@ -263,18 +264,25 @@ const Search: React.FC = (props:any) => {
                 })
 
                 console.log("=== GO function_AT_CRUD_READ ")
+                //new main data -> STEP 9
+
+
                 props.function_AT_CRUD_READ({
                     database_to_exec:   props.work_sqlile_database,
                     sqlite_api_global_to_exec:   props.work_sqlite_api_global,
                     search_string:      search_string,
-                    entity:      "content_types",
+                    entity:             "content_posts",
+                    state_data_name:    "work_list_content_posts_data",
+                    state_ready_name:   "work_list_content_posts_ready"
                 })
 
                 props.function_AT_CRUD_READ({
                     database_to_exec:   props.work_sqlile_database,
                     sqlite_api_global_to_exec:   props.work_sqlite_api_global,
                     search_string:      search_string,
-                    entity:      "content_posts",
+                    entity:             "content_types",
+                    state_data_name:    "work_list_content_types_data",
+                    state_ready_name:   "work_list_content_types_ready"
                 })
 
 

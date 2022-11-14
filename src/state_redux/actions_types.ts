@@ -11,6 +11,7 @@ export const AT_CRUD_READ_cat_content_types_SQLITE_SUCCESS = 'AT_CRUD_READ_cat_c
 
 
 export const AT_CRUD_READ = 'AT_CRUD_READ';
+export const AT_CRUD_READ_SUCCESS = 'AT_CRUD_READ_SUCCESS';
 
 
 

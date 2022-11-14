@@ -28,6 +28,7 @@ const to_do_function = async (action_to_exec: any) => {
 
         var tSQL = ""
         switch (t_entity) {
+            //new main data -> STEP 8
             case 'content_types':
                 tSQL = "" +
                     "SELECT * FROM content_types "
@@ -64,16 +65,18 @@ export function* exec_function(action: any) {
             console.log("=== response yield call " + thisFile)
             console.log(response)
 
-            const actionToPut = action
+            if (response) {
+                const actionToPut = action
 
-            // actionToPut.type = action.type.replace("_START", "_SUCCESS")
-            // actionToPut.ret_database = response.ret_database;
-            // actionToPut.ret_sqlite_api_global = response.ret_sqlite_api_global;
-            // actionToPut.status = 'SUCCESS';
-            //
-            // yield put(
-            //     actionToPut
-            // );
+                actionToPut.type = action.type + "_SUCCESS"
+                actionToPut.ret_data = response.values;
+                actionToPut.status = 'SUCCESS';
+
+                yield put(
+                    actionToPut
+                );
+            }
+
 
     } catch (e) {
         // yield put(setDatabaseError(error));
@@ -87,7 +90,8 @@ export function* watch_function(params: any) {
     console.log("=== watch_function " + thisFile)
     console.log(params)
 
-    yield  (takeLatest(AT_CRUD_READ, exec_function));
+    // takeEvery -> for each call !!!
+    yield  (takeEvery(AT_CRUD_READ, exec_function));
 
 }
 
