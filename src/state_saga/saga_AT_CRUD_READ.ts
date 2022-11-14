@@ -16,6 +16,9 @@ const to_do_function = async (action_to_exec: any) => {
 
         console.log('=== to_do_function ' + thisFile );
         console.log('=== action_to_exec ', action_to_exec );
+        console.log('=== entity ', action_to_exec.action.params_to_exec.entity );
+
+        const t_entity = action_to_exec.action.params_to_exec.entity
 
         var database1  = action_to_exec.action.params_to_exec.database_to_exec
 
@@ -23,8 +26,18 @@ const to_do_function = async (action_to_exec: any) => {
 
         var f_pre_sql = await database1.query( "PRAGMA case_sensitive_like = 1" )
 
-        var tSQL = "" +
-            "SELECT * FROM content_types "
+        var tSQL = ""
+        switch (t_entity) {
+            case 'content_types':
+                tSQL = "" +
+                    "SELECT * FROM content_types "
+                break
+            case 'content_posts':
+                tSQL = "" +
+                    "SELECT * FROM content_posts "
+                break
+        }
+
 
         var tRES= await database1.query( tSQL )
 

@@ -267,6 +267,14 @@ const Search: React.FC = (props:any) => {
                     database_to_exec:   props.work_sqlile_database,
                     sqlite_api_global_to_exec:   props.work_sqlite_api_global,
                     search_string:      search_string,
+                    entity:      "content_types",
+                })
+
+                props.function_AT_CRUD_READ({
+                    database_to_exec:   props.work_sqlile_database,
+                    sqlite_api_global_to_exec:   props.work_sqlite_api_global,
+                    search_string:      search_string,
+                    entity:      "content_posts",
                 })
 
 
