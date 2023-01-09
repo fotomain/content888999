@@ -37,6 +37,7 @@ import {close, keypad, search, settings} from "ionicons/icons";
 import { alpha, styled } from '@mui/material/styles';
 import CloseIcon from '@mui/icons-material/Close';
 import SearchIcon from '@mui/icons-material/Search';
+import Drag from "../components_basic/Drag";
 
 
 //=== DOC cool  https://smartdevpreneur.com/override-textfield-border-color-in-material-ui/#Outlined_Variant
@@ -117,6 +118,7 @@ const theme1 = createTheme({
         },
     }
 });
+
 
 
 const Tab5: React.FC  = (props:any) => {
@@ -227,6 +229,12 @@ const Tab5: React.FC  = (props:any) => {
 
 
               <IonRow>
+                      <IonCard>
+                          <Drag />
+                      </IonCard>
+              </IonRow>
+
+              <IonRow>
                   <IonCard>
 
                       <ThemeProvider theme={theme1}>
@@ -239,7 +247,7 @@ const Tab5: React.FC  = (props:any) => {
                               value={search_string}
                               label="Search..."
                               InputProps={(show_props1_start_end) ? props1_start_end : props1}
-                              variant="standard"
+                              variant="outlined"
                               onFocus={(e)=>{
                                   console.log("=== onFocus_input_search")
                                   set_show_props1_start_end(true)
